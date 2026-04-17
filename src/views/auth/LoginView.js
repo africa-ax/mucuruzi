@@ -2,7 +2,7 @@
 // LoginView.js — Mucuruzi Login Screen
 // ============================================================
 
-import { login, resetPassword } from "../../auth/Auth.js";
+import { login, resetPassword } from "/src/auth/Auth.js";
 
 export function renderLoginView(onLoginSuccess) {
   const container = document.getElementById("app");
