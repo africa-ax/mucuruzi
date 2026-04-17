@@ -1,7 +1,7 @@
 // ============================================================
 // HomeTab.js — Dashboard Home Tab
 // Role-specific stats cards with live Firestore counts
-// ============================================================
+// =============================================
 
 import { db } from "/src/config/firebase.js";
 import {
