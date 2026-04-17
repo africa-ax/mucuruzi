@@ -1,9 +1,8 @@
 // ============================================================
 // app.js — Mucuruzi App Entry + Auth Router
 // ============================================================
-
-import { onAuthChange } from "./src/auth/Auth.js";
-import { renderLoginView } from "./src/views/auth/LoginView.js";
+import { onAuthChange } from "/src/auth/Auth.js";
+import { renderLoginView } from "/src/views/auth/LoginView.js";
 
 // ── Boot ─────────────────────────────────────────────────────
 function boot() {
