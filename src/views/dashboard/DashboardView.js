@@ -150,7 +150,10 @@ async function _renderTab(tabId) {
       break;
 
     case "stock":
-      content.innerHTML = _comingSoon("Stock", "View and manage your inventory stock.");
+      {
+        const { renderStockTab } = await import("/src/views/shared/StockTab.js");
+        await renderStockTab(content, _profile);
+      }
       break;
 
     case "marketplace":
