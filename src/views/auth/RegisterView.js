@@ -10,7 +10,6 @@ export function renderRegisterView(onLoginSuccess) {
   container.innerHTML = `
     <div class="auth-page">
 
-      <!-- Left Panel: Branding -->
       <div class="auth-brand">
         <div class="auth-brand-inner">
           <div class="brand-logo">
@@ -31,7 +30,6 @@ export function renderRegisterView(onLoginSuccess) {
         </div>
       </div>
 
-      <!-- Right Panel: Register Form -->
       <div class="auth-form-panel">
         <div class="auth-card auth-card--register">
 
@@ -40,13 +38,11 @@ export function renderRegisterView(onLoginSuccess) {
             <p>Set up your Mucuruzi account</p>
           </div>
 
-          <!-- Error / Success -->
           <div id="register-error" class="auth-alert auth-alert--error hidden"></div>
           <div id="register-success" class="auth-alert auth-alert--success hidden"></div>
 
           <div class="auth-form">
 
-            <!-- Role Selector -->
             <div class="form-group">
               <label for="reg-role">Account Type</label>
               <div class="input-wrapper">
@@ -68,7 +64,6 @@ export function renderRegisterView(onLoginSuccess) {
               </div>
             </div>
 
-            <!-- BUSINESS FIELDS (Manufacturer / Distributor / Retailer) -->
             <div id="business-fields" class="hidden">
 
               <div class="form-group">
@@ -126,7 +121,6 @@ export function renderRegisterView(onLoginSuccess) {
 
             </div>
 
-            <!-- BUYER FIELDS -->
             <div id="buyer-fields" class="hidden">
               <div class="form-group">
                 <label for="reg-name">Full Name</label>
@@ -142,7 +136,6 @@ export function renderRegisterView(onLoginSuccess) {
               </div>
             </div>
 
-            <!-- SHARED FIELDS (always visible after role select) -->
             <div id="shared-fields" class="hidden">
 
               <div class="form-group">
@@ -204,7 +197,6 @@ export function renderRegisterView(onLoginSuccess) {
                 </div>
               </div>
 
-              <!-- Terms -->
               <div class="form-group form-check-group">
                 <label class="checkbox-label">
                   <input type="checkbox" id="reg-terms" class="form-checkbox" />
@@ -357,9 +349,13 @@ async function handleRegister(onLoginSuccess) {
         "Account created! Your manufacturer account is pending admin approval. You will be notified once approved."
       );
       // Clear form
-      document.getElementById("reg-role").value = "";
-      document.getElementById("business-fields").classList.add("hidden");
-      document.getElementById("shared-fields").classList.add("hidden");
+      const roleSel = document.getElementById("reg-role");
+      const bizFields = document.getElementById("business-fields");
+      const shrFields = document.getElementById("shared-fields");
+      
+      if (roleSel) roleSel.value = "";
+      if (bizFields) bizFields.classList.add("hidden");
+      if (shrFields) shrFields.classList.add("hidden");
     } else {
       // Navigate straight to dashboard
       onLoginSuccess(result.user);
@@ -372,6 +368,7 @@ async function handleRegister(onLoginSuccess) {
 // ── Helpers ──────────────────────────────────────────────────
 function showError(msg) {
   const el = document.getElementById("register-error");
+  if (!el) return; // FIX: Prevents null property error if view changed
   el.textContent = msg;
   el.classList.remove("hidden");
   el.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -379,14 +376,17 @@ function showError(msg) {
 
 function showSuccess(msg) {
   const el = document.getElementById("register-success");
+  if (!el) return; // FIX: Prevents null property error if view changed
   el.textContent = msg;
   el.classList.remove("hidden");
   el.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function clearMessages() {
-  document.getElementById("register-error").classList.add("hidden");
-  document.getElementById("register-success").classList.add("hidden");
+  const err = document.getElementById("register-error");
+  const succ = document.getElementById("register-success");
+  if (err) err.classList.add("hidden");
+  if (succ) succ.classList.add("hidden");
 }
 
 function setLoading(loading) {
@@ -397,4 +397,4 @@ function setLoading(loading) {
   btn.disabled = loading;
   text.textContent = loading ? "Creating account…" : "Create Account";
   spinner.classList.toggle("hidden", !loading);
-                     }
+  }
