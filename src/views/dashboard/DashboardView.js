@@ -4,7 +4,7 @@
 // ============================================================
 
 import { logout } from "/src/auth/Auth.js";
-import { renderHomeTab } from "/src/views/dashboard/HomeTab.js";
+import { renderHomeTab } from "./HomeTab.js";
 
 // ── Tab Definitions Per Role ─────────────────────────────────
 const TABS = {
@@ -143,7 +143,10 @@ async function _renderTab(tabId) {
       break;
 
     case "products":
-      content.innerHTML = _comingSoon("Products", "Create and manage your product catalog using RRA item codes.");
+      {
+        const { renderProductsTab } = await import("/src/views/manufacturer/ProductsTab.js");
+        renderProductsTab(content, _profile);
+      }
       break;
 
     case "stock":
@@ -277,4 +280,4 @@ function iconMarket() {
     <line x1="3" y1="6" x2="21" y2="6"/>
     <path d="M16 10a4 4 0 0 1-8 0"/>
   </svg>`;
-     }
+    }
