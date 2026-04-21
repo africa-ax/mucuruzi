@@ -1,0 +1,289 @@
+[
+  {
+    "itemCode": "50181703",
+    "productName": "Rice (White, Long Grain)",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50181706",
+    "productName": "Maize Flour",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50171500",
+    "productName": "Wheat Flour (All Purpose)",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50221200",
+    "productName": "Refined Sugar",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50131600",
+    "productName": "Cooking Oil (Palm)",
+    "category": "Food & Beverages",
+    "unit": "LTR",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50201700",
+    "productName": "Table Salt (Iodized)",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50102700",
+    "productName": "Dried Beans (Red)",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50401800",
+    "productName": "Whole Milk (Pasteurized)",
+    "category": "Food & Beverages",
+    "unit": "LTR",
+    "taxGrade": "A"
+  },
+  {
+    "itemCode": "50202300",
+    "productName": "Black Tea Leaves",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "50203100",
+    "productName": "Ground Coffee (Arabica)",
+    "category": "Food & Beverages",
+    "unit": "KG",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "50352700",
+    "productName": "Carbonated Soft Drink (500ml)",
+    "category": "Food & Beverages",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "50352100",
+    "productName": "Bottled Water (1.5L)",
+    "category": "Food & Beverages",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "30111505",
+    "productName": "Portland Cement (50kg Bag)",
+    "category": "Construction",
+    "unit": "BAG",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "30111600",
+    "productName": "Iron Roofing Sheets",
+    "category": "Construction",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "30102600",
+    "productName": "Steel Rebar (12mm)",
+    "category": "Construction",
+    "unit": "MTR",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "30161700",
+    "productName": "River Sand",
+    "category": "Construction",
+    "unit": "KG",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "30101700",
+    "productName": "Crushed Stone Aggregate",
+    "category": "Construction",
+    "unit": "KG",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "31162800",
+    "productName": "PVC Water Pipe (1 inch)",
+    "category": "Construction",
+    "unit": "MTR",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "39121000",
+    "productName": "Paint (Interior Emulsion 20L)",
+    "category": "Construction",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "43211500",
+    "productName": "Mobile Phone (Smartphone)",
+    "category": "Electronics",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "43211902",
+    "productName": "Laptop Computer",
+    "category": "Electronics",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "39111600",
+    "productName": "LED Bulb (9W)",
+    "category": "Electronics",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "39121900",
+    "productName": "Solar Panel (100W)",
+    "category": "Electronics",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "53102501",
+    "productName": "Men's Cotton T-Shirt",
+    "category": "Textiles & Clothing",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "53102601",
+    "productName": "Women's Cotton Dress",
+    "category": "Textiles & Clothing",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "53121600",
+    "productName": "Cotton Fabric (Plain Weave)",
+    "category": "Textiles & Clothing",
+    "unit": "MTR",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "10151700",
+    "productName": "Fertilizer (NPK 50kg)",
+    "category": "Agriculture",
+    "unit": "BAG",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "10151500",
+    "productName": "Pesticide (Herbicide 1L)",
+    "category": "Agriculture",
+    "unit": "LTR",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "10191600",
+    "productName": "Maize Seeds (Hybrid 2kg)",
+    "category": "Agriculture",
+    "unit": "KG",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "10191700",
+    "productName": "Bean Seeds (Improved)",
+    "category": "Agriculture",
+    "unit": "KG",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "42141600",
+    "productName": "Paracetamol Tablets (500mg)",
+    "category": "Pharmaceuticals",
+    "unit": "PACK",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "42141700",
+    "productName": "Oral Rehydration Salts (ORS)",
+    "category": "Pharmaceuticals",
+    "unit": "PACK",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "42141900",
+    "productName": "Antiseptic Solution (500ml)",
+    "category": "Pharmaceuticals",
+    "unit": "PCS",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "15101500",
+    "productName": "Diesel Fuel",
+    "category": "Fuel & Energy",
+    "unit": "LTR",
+    "taxGrade": "D"
+  },
+  {
+    "itemCode": "15101700",
+    "productName": "Petrol (Unleaded)",
+    "category": "Fuel & Energy",
+    "unit": "LTR",
+    "taxGrade": "D"
+  },
+  {
+    "itemCode": "15111500",
+    "productName": "Liquefied Petroleum Gas (LPG 6kg)",
+    "category": "Fuel & Energy",
+    "unit": "PCS",
+    "taxGrade": "D"
+  },
+  {
+    "itemCode": "31191500",
+    "productName": "Dry Cell Battery (AA, Pack of 4)",
+    "category": "Electronics",
+    "unit": "PACK",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "47131800",
+    "productName": "Laundry Soap Bar",
+    "category": "Household",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "47131600",
+    "productName": "Liquid Detergent (1L)",
+    "category": "Household",
+    "unit": "PCS",
+    "taxGrade": "B"
+  },
+  {
+    "itemCode": "14111500",
+    "productName": "Exercise Book (96 pages)",
+    "category": "Stationery",
+    "unit": "PCS",
+    "taxGrade": "C"
+  },
+  {
+    "itemCode": "14111800",
+    "productName": "Ballpoint Pen (Blue, Box of 50)",
+    "category": "Stationery",
+    "unit": "BOX",
+    "taxGrade": "B"
+  }
+]
