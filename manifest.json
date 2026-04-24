@@ -1,0 +1,17 @@
+{
+  "name": "Mucuruzi — Rwanda Supply Chain",
+  "short_name": "Mucuruzi",
+  "description": "Rwanda's Digital Supply Chain Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#00c896",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='32' fill='%2300c896'/><text x='96' y='140' font-size='120' text-anchor='middle' fill='%230a1628' font-family='sans-serif' font-weight='900'>M</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
