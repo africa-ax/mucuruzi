@@ -22,55 +22,47 @@ const AuthService = (() => {
   };
 
   // ── 1. Register (Improved logic) ──────────────────────────────
-  const register = async (userData) => {
+  
+const register = async (userData) => {
     try {
-      const {
-        email, password, businessName,
-        role, phone, district,
-        tinNumber = '', sdcId = '',
-      } = userData;
+      const { email, password, role, ...rest } = userData;
+      _isRegistering = true; // Prevent auth state listener from firing early
 
-      _isRegistering = true;
+      // 1. Create the AUTH account first
+      const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+      const user = userCredential.user;
 
-      // 1. Create Firebase Auth user FIRST
-      const credential = await auth.createUserWithEmailAndPassword(email, password);
-      const user = credential.user;
-
-      // 2. Prepare profile data
-      const isSeller = ROLE_CAN_SELL.includes(role);
+      // 2. Prepare the Firestore data using the REAL UID from Auth
       const profile = {
-        uid: user.uid,
-        businessName: businessName.trim(),
+        uid: user.uid, // Use the real Firebase Auth UID
         email: email.trim().toLowerCase(),
         role,
-        phone: phone.trim(),
-        district: district.trim(),
-        tinNumber: isSeller ? tinNumber.trim() : '',
-        sdcId: isSeller ? sdcId.trim() : '',
-        photoURL: '',
-        isActive: true,
+        ...rest,
+        createdAt: serverTimestamp(),
+        isActive: true
       };
 
-      // 3. Save profile to Firestore
-      await _saveUserProfile(user.uid, profile);
+      // 3. Save to Firestore using the UID as the Document ID
+      // This is crucial: .doc(user.uid)
+      await db.collection(Collections.USERS).doc(user.uid).set(profile);
 
       _isRegistering = false;
       return { success: true, user: profile };
 
     } catch (err) {
       _isRegistering = false;
-      console.error("Registration Error:", err.code, err.message);
+      console.error("Registration failed:", err.code);
 
-      // If auth succeeded but Firestore failed, we remove the auth user
-      // so the user can retry without getting "Email already in use"
-      if (auth.currentUser && err.code !== 'auth/email-already-in-use') {
-        try { await auth.currentUser.delete(); } catch(e) { console.error("Cleanup failed", e); }
+      // CRITICAL CLEANUP: 
+      // If Auth succeeded but Firestore failed, we must delete the Auth user
+      // so the email isn't "trapped" for the next attempt.
+      if (auth.currentUser) {
+        await auth.currentUser.delete().catch(() => {});
       }
-      
+
       return { success: false, error: _parseAuthError(err) };
     }
   };
-
   // ... (Keep login, loginWithGoogle, logout, and _parseAuthError as they were) ...
 
   const login = async (email, password) => {
